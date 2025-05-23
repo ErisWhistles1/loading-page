@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ID Verification Info</title>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      width: 100vw;
+      height: 100vh;
+      font-family: Arial, sans-serif;
+      background-color: #fff;
+    }
+
+    #infoRequirements {
+      position: relative;
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+
+    #infoRequirements p {
+      font-size: 16px;
+      color: #333;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .doc-option {
+      display: flex;
+      align-items: center;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      width: 90%;
+      max-width: 400px;
+      margin-bottom: 16px;
+    }
+
+    .doc-icon {
+      width: 36px;
+      height: 36px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      margin-right: 12px;
+    }
+
+    .doc-text {
+      line-height: 36px;
+    }
+
+    .note {
+      margin-top: 30px;
+      font-size: 14px;
+      color: #888;
+      text-align: center;
+    }
+
+    #loadingSpinner {
+      margin-top: 20px;
+      width: 48px;
+      height: 48px;
+      border: 6px solid #ccc;
+      border-top: 6px solid #007bff;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+  </style>
+</head>
+<body>
+
+  <div id="infoRequirements">
+    <p>In order to release funding, we will need you to have one of the documents below handy:</p>
+
+    <div class="doc-option">
+      <div class="doc-icon">🚗</div>
+      <span class="doc-text">Driving Licence (Front and Back)</span>
+    </div>
+
+    <div class="doc-option">
+      <div class="doc-icon">🪪</div>
+      <span class="doc-text">National Identity Card (Front and Back)</span>
+    </div>
+
+    <div class="doc-option">
+      <div class="doc-icon">🌐</div>
+      <span class="doc-text">Passport (Photo Page)</span>
+    </div>
+
+    <p class="note">Your document is being generated, this can take up to a minute to process...</p>
+
+    <div id="loadingSpinner"></div>
+  </div>
+
+</body>
+</html>
